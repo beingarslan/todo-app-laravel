@@ -17,7 +17,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        $tasks = Task::orderBy('priority', 'asc')->get();
+        return view('tasks.index', compact('tasks'));
     }
 
     /**

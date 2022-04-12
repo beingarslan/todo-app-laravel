@@ -30,6 +30,7 @@ Route::group(
     ],
     function () {
         Route::post('store', [TaskController::class, 'store'])->name('store');
+        Route::get('/', [TaskController::class, 'index'])->name('index');
     }
 );
 
